@@ -1,24 +1,32 @@
 package com.alastbing.covid19.api;
 
 import com.alastbing.covid19.service.Covid19Service;
-import com.alastbing.covid19.utils.FeedResult;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.alastbing.covid19.edtity.DataResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
 
 @RestController
-@RequestMapping("/api/client")
+@RequestMapping("/robot/covid19")
 public class Covid19Api {
 
-    @Autowired
-    private Covid19Service covid19Service;
+    @Resource(name = "covid19DXY")
+    private Covid19Service covid19DXY;
+    @Resource(name = "covid19QQ")
+    private Covid19Service covid19QQ;
 
-    @RequestMapping("/covid19")
+    @RequestMapping("/DXY")
     @ResponseBody
-    public FeedResult getCovid19Data(HttpSession session) {
-        return covid19Service.getDxyData();
+    public DataResult getCovid19DXYData(HttpSession session) {
+        return covid19DXY.getData();
+    }
+
+    @RequestMapping("/QQ")
+    @ResponseBody
+    public DataResult getCovid19QQData(HttpSession session) {
+        return covid19QQ.getData();
     }
 }

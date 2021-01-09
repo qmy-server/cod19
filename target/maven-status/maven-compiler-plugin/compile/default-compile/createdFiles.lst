@@ -1,0 +1,10 @@
+com\alastbing\covid19\Covid19Application.class
+com\alastbing\covid19\api\Covid19Api.class
+com\alastbing\covid19\utils\SSLClient$1.class
+com\alastbing\covid19\edtity\DataResult.class
+com\alastbing\covid19\utils\HttpClientUtil.class
+com\alastbing\covid19\service\impl\Covid19DXYImpl.class
+com\alastbing\covid19\service\Covid19Service.class
+com\alastbing\covid19\utils\HttpClientUtil$1.class
+com\alastbing\covid19\utils\SSLClient.class
+com\alastbing\covid19\service\impl\Covid19QQImpl.class

@@ -1,6 +1,6 @@
 package com.alastbing.covid19.service;
 
-import com.alastbing.covid19.utils.FeedResult;
+import com.alastbing.covid19.edtity.DataResult;
 
 /**
  * @ClassName Covid19Service
@@ -11,6 +11,6 @@ import com.alastbing.covid19.utils.FeedResult;
  **/
 public interface Covid19Service {
 
-    FeedResult getDxyData();
+    DataResult getData();
 
 }
